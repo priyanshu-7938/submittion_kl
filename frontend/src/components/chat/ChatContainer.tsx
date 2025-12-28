@@ -4,6 +4,8 @@ import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import TypingIndicator from "./TypingIndicator";
 import WelcomeCard from "./WelcomeCard";
+import { useQuerryContext, type SessionResponse } from "@/context/QuerryContext";
+import { toast } from "sonner";
 
 interface Message {
   id: string;
@@ -13,13 +15,20 @@ interface Message {
 }
 
 
-const defaultResponse = "Thank you for your interest! 🌱 Our wellness experts are here to help you find the perfect natural solutions. Could you tell me more about what you're looking for? Whether it's sleep support, immunity, stress relief, or something else - I'm here to guide you.";
 
 const ChatContainer = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const { 
+    session, 
+    createSession,
+    setSession,
+    getMessages
+  } = useQuerryContext();
+
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -29,9 +38,38 @@ const ChatContainer = () => {
     scrollToBottom();
   }, [messages, isTyping]);
 
+  // now we have a sesion finder system if a new person. 
+  useEffect(()=>{
+    // fetch teh sesion if session exist tehn fetch user cahts else get the session and the get tehnseeion
+    const calling = async ()=>{
+      //get session..
+      await new Promise(async (res,rej)=>{
+        if(session){
+          res(session as string);
+        }else{
+          // get a enw sesion....
+          const data: SessionResponse = await createSession();
+          // set the session in the localstorage.
+          setSession(data.sessionId);
+          res(data.sessionId);
+        }
+      })
+      .then(async (sessionId)=>{
+        // now fetch the messages
+        const fetchedMessages = await getMessages(sessionId as string);
+        console.log(fetchedMessages);
+        return "helo";
+      })
+      .catch((e)=>{
+        toast.error("Failed to load Error:", e);
+      })
+    }
+    calling();
+  },[]);
+
   const handleSendMessage = (content: string) => {
-    // Hide welcome card
     setShowWelcome(false);
+    // mene send kar dena  hai request..
   };
 
   return (

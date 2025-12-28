@@ -6,11 +6,25 @@ import path from "path";
 import { hydrateController, hydrateCustomController } from "./controllers/utilscontrollers.js";
 import bodyParser from "body-parser";
 import { handleSessionCreate, messageWithSession, getMessages} from "./controllers/chat-api.js";
+import cors from "cors";
 // import knowledge from "./services/knowledge.js";
 
 const app = express();
 
 app.use(bodyParser.json());
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
+
+app.get("/",(req,res)=>{
+    res.send("hello, world;");
+});
 
 app.post("/hydrate", hydrateController);
 app.post("/customhydrate", hydrateCustomController);

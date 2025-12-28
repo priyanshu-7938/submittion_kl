@@ -1,6 +1,16 @@
-import { createContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
-export const QuerryContext = createContext({});
+interface QuerryContextType {
+  session: string | null;
+  createSession: () => Promise<SessionResponse>;
+  sendMessage: (sessionId: string, message: string) => Promise<MessageResponse>;
+  getMessages: (sessionId: string) => Promise<HistoryResponse>;
+  setSession: (sessionString: string) => void;
+  refressSession: () => void;
+  resetSession: () => void;
+}
+
+const QuerryContext = createContext<QuerryContextType| null>(null);
 
 export interface SessionResponse {
   message: string;
@@ -106,3 +116,10 @@ const ContextProvider = ({children}: {children: ReactNode})=>{
 
 
 export default ContextProvider;
+export const useQuerryContext = () => {
+  const ctx = useContext(QuerryContext);
+  if (!ctx) {
+    throw new Error("useQuerryContext must be used inside ContextProvider");
+  }
+  return ctx;
+};
