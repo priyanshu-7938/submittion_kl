@@ -32,8 +32,8 @@ const WelcomeCard = ({ onSuggestionClick }: WelcomeCardProps) => {
         {[
           "What herbs help with sleep?",
           "Show me immunity boosters",
-          "Natural stress relief options",
-          "Best sellers this week"
+          "What is our return policy?",
+          "Best product in our inventory!"
         ].map((suggestion, index) => (
           <button
             key={index}

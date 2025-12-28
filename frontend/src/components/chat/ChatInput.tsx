@@ -25,7 +25,7 @@ const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
 
   return (
     <div className="glass-strong p-3 md:p-4 border-t border-border/20 sticky bottom-0">
-      <div className="flex items-end gap-2 md:gap-3">
+      <div className="flex items-center gap-2 md:gap-3">
         <button className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center text-primary hover:from-primary/30 hover:to-primary/20 transition-all flex-shrink-0">
           <Sparkles className="w-4 h-4 md:w-5 md:h-5" />
         </button>
@@ -42,10 +42,6 @@ const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
             style={{ minHeight: "44px", maxHeight: "120px" }}
           />
         </div>
-        
-        <button className="w-10 h-10 md:w-11 md:h-11 rounded-xl glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-all flex-shrink-0">
-          <Mic className="w-4 h-4 md:w-5 md:h-5" />
-        </button>
         
         <button
           onClick={handleSend}
