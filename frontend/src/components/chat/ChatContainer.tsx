@@ -4,20 +4,13 @@ import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import TypingIndicator from "./TypingIndicator";
 import WelcomeCard from "./WelcomeCard";
-import { useQuerryContext, type SessionResponse } from "@/context/QuerryContext";
+import { useQuerryContext, type SessionResponse, type ChatMessage as Messages, type MessageResponse} from "@/context/QuerryContext";
 import { toast } from "sonner";
-
-interface Message {
-  id: string;
-  content: string;
-  sender: "bot" | "user";
-  timestamp: Date;
-}
 
 
 
 const ChatContainer = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Messages[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -26,7 +19,9 @@ const ChatContainer = () => {
     session, 
     createSession,
     setSession,
-    getMessages
+    getMessages,
+    resetSession,
+    sendMessage
   } = useQuerryContext();
 
 
@@ -57,11 +52,19 @@ const ChatContainer = () => {
       .then(async (sessionId)=>{
         // now fetch the messages
         const fetchedMessages = await getMessages(sessionId as string);
-        console.log(fetchedMessages);
-        return "helo";
+        if(fetchedMessages.status){
+          if(fetchedMessages.messages.length>0)setShowWelcome(false);
+          return fetchedMessages.messages;
+        }
+        // reintiatl the session. delete session
+        resetSession();
+        throw Error("Session Invalid");
+      })
+      .then((mesages_loc)=>{
+        setMessages(mesages_loc as Messages[]);
       })
       .catch((e)=>{
-        toast.error("Failed to load Error:", e);
+        toast.error("Failed to load, Error:", e);
       })
     }
     calling();
@@ -69,7 +72,52 @@ const ChatContainer = () => {
 
   const handleSendMessage = (content: string) => {
     setShowWelcome(false);
+    setIsTyping(true);
+    // here we will call the message and then wait for the response.... 
     // mene send kar dena  hai request..
+    // append my mesage to list
+    setMessages((prev) => {
+      const lastId = prev.length ? prev[prev.length - 1].id : 0;
+      return [
+        ...prev,
+        {
+          role: "USER",
+          content,
+          createdAt: new Date().toISOString(),
+          id: lastId + 1,
+        },
+      ];
+    });
+
+    new Promise(async (res,rej)=>{
+      // will fetch and will move forward to updating the data...
+      if(session == null){
+        toast.info("Wait for session to be init.");
+        rej("failed to resolve");
+        return;
+      }
+      const res_message: MessageResponse = await sendMessage(session, content);
+      if(res_message.status){
+        //  update  hte quee
+        setMessages((prev) => {
+          const lastId = prev.length ? prev[prev.length - 1].id : 0;
+
+          return [
+            ...prev,
+            {
+              role: "BOT",
+              content: res_message.response,
+              createdAt: new Date().toISOString(),
+              id: lastId + 1,
+            },
+          ];
+        });
+      }else{
+        toast.info("Faield to generate a response!!");
+        console.error(res_message);
+      }
+      setIsTyping(false);
+    })
   };
 
   return (
