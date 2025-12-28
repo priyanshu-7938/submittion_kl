@@ -1,4 +1,4 @@
-import { Leaf, Settings, Phone, Volume2 } from "lucide-react";
+import { Leaf } from "lucide-react";
 
 const ChatHeader = () => {
   return (

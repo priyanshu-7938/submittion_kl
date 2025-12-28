@@ -38,7 +38,7 @@ const ChatContainer = () => {
     // fetch teh sesion if session exist tehn fetch user cahts else get the session and the get tehnseeion
     const calling = async ()=>{
       //get session..
-      await new Promise(async (res,rej)=>{
+      await new Promise(async (res)=>{
         if(session){
           res(session as string);
         }else{
@@ -89,7 +89,7 @@ const ChatContainer = () => {
       ];
     });
 
-    new Promise(async (res,rej)=>{
+    new Promise(async (rej)=>{
       // will fetch and will move forward to updating the data...
       if(session == null){
         toast.info("Wait for session to be init.");
