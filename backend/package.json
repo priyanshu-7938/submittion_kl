@@ -7,9 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "npm run chat",
     "dev": "nodemon src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prod": "node --experimental-specifier-resolution=node dist/server.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

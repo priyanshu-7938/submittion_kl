@@ -1,12 +1,12 @@
-import "./utils/envocation";
+import "./utils/envocation.js";
 import express from "express";
-import Knowledge from "./services/knowledge";
+import Knowledge from "./services/knowledge/index.js";
 import fs from "fs";
 import path from "path";
-import { hydrateController, hydrateCustomController } from "./controllers/utilscontrollers";
+import { hydrateController, hydrateCustomController } from "./controllers/utilscontrollers.js";
 import bodyParser from "body-parser";
-import { handleSessionCreate, messageWithSession, getMessages} from "./controllers/chat-api";
-import knowledge from "./services/knowledge";
+import { handleSessionCreate, messageWithSession, getMessages} from "./controllers/chat-api.js";
+// import knowledge from "./services/knowledge.js";
 
 const app = express();
 

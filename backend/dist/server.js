@@ -1,8 +1,9 @@
-import "./utils/envocation";
+import "./utils/envocation.js";
 import express from "express";
-import { hydrateController, hydrateCustomController } from "./controllers/utilscontrollers";
+import { hydrateController, hydrateCustomController } from "./controllers/utilscontrollers.js";
 import bodyParser from "body-parser";
-import { handleSessionCreate, messageWithSession, getMessages } from "./controllers/chat-api";
+import { handleSessionCreate, messageWithSession, getMessages } from "./controllers/chat-api.js";
+// import knowledge from "./services/knowledge.js";
 const app = express();
 app.use(bodyParser.json());
 app.post("/hydrate", hydrateController);
@@ -17,6 +18,6 @@ app.post("/messages", getMessages);
 //     const data = await knowledge.searchSimilar(reqq);
 //     res.send(data);
 // })
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("runningthe server baby.");
 });

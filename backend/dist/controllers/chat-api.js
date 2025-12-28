@@ -1,7 +1,7 @@
-import Guards from "../services/guards";
-import LLM from "../services/llm";
-import DataLayer from "../services/data";
-import { Role } from "../../generated/prisma/client";
+import Guards from "../services/guards/index.js";
+import LLM from "../services/llm/index.js";
+import DataLayer from "../services/data/index.js";
+import { Role } from "../../generated/prisma/client.js";
 const handleSessionCreate = async (req, res) => {
     // pinging the data layer to create an session..
     const sessionId = await DataLayer.createSession();

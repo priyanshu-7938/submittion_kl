@@ -1,7 +1,7 @@
 import { createClient } from "redis";
-import { PrismaClient } from "../../../generated/prisma/client";
+import { PrismaClient } from "../../../generated/prisma/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
-import knowledge from "../knowledge";
+import knowledge from "../knowledge/index.js";
 const connectionString = `${process.env.DATABASE_URL}`;
 class DataLayer {
     static instance;

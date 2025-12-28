@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI, Content, Part } from "@google/generative-ai";
-import { Role } from "../../../generated/prisma/client";
+import { Role } from "../../../generated/prisma/client.js";
 
 interface GeminiConfig {
     model: string;

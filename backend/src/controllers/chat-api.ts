@@ -1,8 +1,8 @@
 import { Response, Request } from "express";
-import Guards, { ValidationResult } from "../services/guards";
-import LLM, { ChatMessage } from "../services/llm";
-import DataLayer, { Message } from "../services/data";
-import { Role } from "../../generated/prisma/client"; 
+import Guards, { ValidationResult } from "../services/guards/index.js";
+import LLM, { ChatMessage } from "../services/llm/index.js";
+import DataLayer, { Message } from "../services/data/index.js";
+import { Role } from "../../generated/prisma/client.js"; 
 
 
 const handleSessionCreate = async (req: Request, res: Response) =>{

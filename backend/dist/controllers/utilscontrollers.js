@@ -1,4 +1,4 @@
-import Knowledge from "../services/knowledge";
+import Knowledge from "../services/knowledge/index.js";
 import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";

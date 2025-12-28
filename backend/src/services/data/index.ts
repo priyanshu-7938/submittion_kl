@@ -1,8 +1,8 @@
 import { createClient, RedisClientType } from "redis";
-import { PrismaClient, ChatMessage, Role } from "../../../generated/prisma/client";
+import { PrismaClient, ChatMessage, Role } from "../../../generated/prisma/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { v4 as uuidv4 } from 'uuid';
-import knowledge from "../knowledge";
+import knowledge from "../knowledge/index.js";
 
 const connectionString = `${process.env.DATABASE_URL}` as string;
 
