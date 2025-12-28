@@ -1,0 +1,227 @@
+[DOCUMENT_TYPE: BUSINESS_OVERVIEW]
+[BUSINESS_NAME: GreenRoot Botanicals]
+[DOMAIN: E-COMMERCE | HERBAL_PRODUCTS | WELLNESS]
+[SUMMARY: Online herbal and natural wellness store documentation]
+
+GreenRoot Botanicals
+Nature. Wellness. Delivered.
+
+GreenRoot Botanicals is an imaginary online-first business dedicated to sourcing, curating, and selling a wide variety of herbs, botanicals, and natural wellness products to customers around the world.
+
+This document contains business overview, product catalog, sourcing standards, policies, legal compliance, and future plans for an online herbal store.
+
+
+[SECTION: BUSINESS_OVERVIEW]
+[TOPIC: COMPANY_INFORMATION]
+
+Business Name: GreenRoot Botanicals
+Business Type: E-commerce (Online Herbal & Natural Products Store)
+Industry: Herbal Products, Wellness, Natural Remedies
+Target Market: Health-conscious consumers, herbalists, wellness enthusiasts, natural medicine practitioners
+
+GreenRoot Botanicals operates entirely online, offering ethically sourced, lab-tested herbs and plant-based products. The goal is to provide high-quality herbal products with transparency, education, and customer trust.
+
+
+[SECTION: PRODUCT_CATEGORIES]
+[TOPIC: PRODUCT_CLASSIFICATION]
+
+- Dried Herbs & Leaves
+- Roots & Rhizomes
+- Seeds & Berries
+- Flowers & Petals
+- Herbal Powders
+- Herbal Teas & Blends
+- Tinctures & Extracts (non-prescription)
+- Aromatic & Culinary Herbs
+
+
+[SECTION: PRODUCT_CATALOG]
+[TOPIC: HERB_LIST]
+
+[SUBCATEGORY: LEAF_AND_AERIAL_HERBS]
+- Basil
+- Holy Basil (Tulsi)
+- Mint
+- Peppermint
+- Spearmint
+- Lemon Balm
+- Sage
+- Rosemary
+- Thyme
+- Oregano
+- Parsley
+- Coriander Leaf (Cilantro)
+- Bay Leaf
+- Neem Leaf
+- Stevia Leaf
+- Patchouli
+- Catnip
+- Dandelion Leaf
+- Moringa Leaf
+- Senna Leaf
+- Gotu Kola
+- Brahmi
+- Ashwagandha Leaf
+
+[SUBCATEGORY: ROOTS_AND_RHIZOMES]
+- Ginger Root
+- Turmeric Root
+- Licorice Root
+- Ashwagandha Root
+- Ginseng (Asian)
+- Ginseng (American)
+- Burdock Root
+- Dandelion Root
+- Valerian Root
+- Angelica Root
+- Marshmallow Root
+- Maca Root
+- Chicory Root
+- Orris Root
+- Vetiver Root
+
+[SUBCATEGORY: SEEDS_AND_BERRIES]
+- Fennel Seeds
+- Fenugreek Seeds
+- Cumin Seeds
+- Black Seed (Nigella Sativa)
+- Coriander Seeds
+- Cardamom Pods
+- Mustard Seeds
+- Milk Thistle Seeds
+- Chia Seeds
+- Flax Seeds
+- Juniper Berries
+- Hawthorn Berries
+- Schisandra Berries
+- Goji Berries
+
+[SUBCATEGORY: FLOWERS_AND_PETALS]
+- Chamomile Flowers
+- Hibiscus Flowers
+- Lavender Buds
+- Rose Petals
+- Calendula Flowers
+- Blue Pea Flower
+- Elderflower
+- Jasmine Flowers
+- Safflower
+- Lotus Flower
+
+[SUBCATEGORY: BARK_RESINS_GUMS]
+- Cinnamon Bark
+- Slippery Elm Bark
+- Willow Bark
+- Frankincense Resin
+- Myrrh Resin
+- Pine Bark
+
+[SUBCATEGORY: HERBAL_POWDERS_AND_BLENDS]
+- Turmeric Powder
+- Ginger Powder
+- Ashwagandha Powder
+- Moringa Powder
+- Triphala Blend
+- Chyawanprash Herbal Mix
+- Digestive Herbal Blend
+- Immunity Support Blend
+- Sleep Support Herbal Blend
+
+
+[SECTION: SOURCING_AND_QUALITY]
+[TOPIC: QUALITY_ASSURANCE | SUPPLY_CHAIN]
+
+- Herbs sourced from trusted farms and cooperatives
+- Preference for organic and pesticide-free cultivation
+- Batch-level quality checks and contamination screening
+- Proper storage to preserve potency and freshness
+
+
+[SECTION: DISCLAIMER]
+[TOPIC: PRODUCT_USAGE | LEGAL_NOTICE]
+
+All products are intended for educational, culinary, aromatic, or traditional wellness use only.
+Products are not intended to diagnose, treat, cure, or prevent any disease.
+Customers should consult qualified healthcare professionals before use.
+
+
+[SECTION: PRIVACY_POLICY]
+[TOPIC: DATA_COLLECTION | USER_PRIVACY]
+
+[DATA_COLLECTED]
+- Personal information (name, email, phone number)
+- Shipping and billing addresses
+- Payment metadata (via secure third-party gateways)
+- Website usage data (cookies, analytics)
+
+[DATA_USAGE]
+- Order processing and fulfillment
+- Customer communication and support
+- Website performance improvement
+- Promotional emails (with consent)
+
+[DATA_PROTECTION]
+- HTTPS encryption
+- Limited internal access
+- No selling or sharing of customer data for marketing
+
+
+[SECTION: SHIPPING_POLICY]
+[TOPIC: ORDER_FULFILLMENT | LOGISTICS]
+
+- Orders processed within 1–3 business days
+- Domestic and international shipping available
+- Delivery timelines vary by destination
+- Tracking information provided after dispatch
+
+Customs delays and import restrictions are the responsibility of the destination country.
+
+
+[SECTION: RETURN_AND_REFUND_POLICY]
+[TOPIC: CUSTOMER_SERVICE | RETURNS]
+
+- Returns accepted within 14 days of delivery
+- Products must be unopened and in original packaging
+- Opened consumables are non-returnable
+- Refunds issued within 7–10 business days
+
+Shipping costs are non-refundable unless the item is damaged or incorrect.
+
+
+[SECTION: CANCELLATION_POLICY]
+[TOPIC: ORDER_MANAGEMENT]
+
+- Orders may be canceled before shipment
+- No cancellations after dispatch
+- Refunds for canceled orders processed within 5 business days
+
+
+[SECTION: CUSTOMER_SUPPORT]
+[TOPIC: SUPPORT_CONTACT]
+
+Email: support@greenrootbotanicals.com
+Support Hours: Monday–Friday, 10 AM – 6 PM (IST)
+
+Support team assists with product questions, orders, and general guidance.
+
+
+[SECTION: LEGAL_COMPLIANCE]
+[TOPIC: REGULATIONS | AGE_RESTRICTIONS]
+
+- Compliance with e-commerce laws
+- Compliance with food and herbal labeling standards
+- Customers must be 18+ to purchase
+
+
+[SECTION: FUTURE_PLANS]
+[TOPIC: BUSINESS_EXPANSION | ROADMAP]
+
+- Subscription-based herbal boxes
+- Educational blog and herbal guides
+- Mobile application
+- Sustainable packaging initiatives
+- Wholesale and B2B partnerships
+
+
+[DOCUMENT_END]
+© GreenRoot Botanicals – All Rights Reserved
